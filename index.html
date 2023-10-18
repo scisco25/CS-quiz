@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>quiz</title>
+        <link rel="stylesheet" href="index.css">
+        <script defer src="index.js"></script>
+    </head>
+    <body>
+        <div class="title quizcontainer quizbox">
+            <h1>Quiz</h1>
+            <p>Can you pass quiz</p>
+            <p class="questionscount"><span id="correct"></span>6 questions</p>
+        </div>
+        <div class="questions quizcontainer" id="questions">
+            <div class="question q1 quizbox">
+                <h2>what is the square root of 11248912781</h2>
+                <p><input type="radio" id="q1-b" name="q1" class="isinput"> 106060.891855</p>
+                <p><input type="radio" id="q1-a" name="q1" class="isinput"> 61555892.4079</p>
+                <p><input type="radio" id="q1-c" name="q1" class="isinput"> 11248912781</p>
+                <p><input type="radio" id="q1-d" name="q1" class="isinput"> 15423.7235128</p>
+                <!--Grading Prompts-->
+                <div class="gradingwrong" id="q1wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">The Square Root of 11248912781 is 106060.891855</p>
+                </div>
+                <div class="gradingright" id="q1right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext">The Square Root of 11248912781 is 106060.891855!</p>
+                </div>
+            </div>
+            <!--q7 because it was added after the rest-->
+            <div class="question q7 quizbox">
+                <h2>please enter the word "box"</h2>
+                <p><input class="isinput" id="q7"></p>
+                <!--Grading Prompts-->
+                <div class="gradingwrong" id="q7wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">That is not the word "box"</p>
+                </div>
+                <div class="gradingright" id="q7right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext">That is the word "box"</p>
+                </div>
+            </div>
+
+            <div class="question q2 quizbox">
+                <h2>Enter a number between <span id="rangenum1"></span> and <span id="rangenum2"></span></h2>
+                <p><input type="range" min="0" max="100" id="q2" class="isinput"> <span id="rangenum">50</span></p>
+                <!--Grading Prompts-->
+                <div class="gradingwrong" id="q2wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext"><span id="pickednumbr">0</span> is not between <span id="wrongrange1">2</span> and <span id="wrongrange2">3</span></p>
+                </div>
+                <div class="gradingright" id="q2right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext"><span id="pickednumberright">0</span> is between <span id="rightrange1">2</span> and <span id="rightrange2">3</span>!</p>
+                </div>
+            </div>
+            <!--there was a third question here-->
+            <div class="question q4 quizbox">
+                <h2>Please Upload a <span id="selectsize"></span> file</h2>
+                <p><input type="file" id="q4" class="isinput"> <span id="byteout"></span></p>
+                <!--Grading Prompts-->
+                <div class="gradingwrong" id="q4wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">Your file is <span id="sizediff">0</span>MB too <span id="difftype">small</span></p>
+                </div>     
+                <div class="gradingright" id="q4right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext">The file you uploaded is <span id="awnserselectsize">0MB</span> large!</p>
+                </div>
+                <div class="gradingwrong" id="q4nofile">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">No file uploaded</p>
+                </div>           
+            </div>
+
+            <div class="question q5 quizbox">
+                <h2>Please Recreate this image</h2>
+                <div class="inline">
+                    <img src="img/monalisa.jpg" class="normalsizeimagepls">
+                    <!--There has to be a better way to do this-->
+                    <div class="checks" id="checks">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                        <input type="checkbox" id="imagebox" class="isinput">
+                    </div> 
+                </div>
+                <div class="gradingwrong" id="q5wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">The Correct answer is...</p>
+                    <!--This sucks-->
+                    <div class="checks" id="correctchecks">
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                        <input type="checkbox" id="imagebox" disabled checked>
+                    </div>
+                </div>
+                <div class="gradingright" id="q5right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext">Its art.</p>
+                </div> 
+            </div>
+
+            <div class="question q6 quizbox">
+                <h2>Please Click this button</h2>
+                <div class="movementspace">
+                    <button id="movingbutton" class="movingbutton isinput">click me</button>
+                </div>
+                <div class="gradingwrong" id="q6wrong">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">You did not click the button.</p>
+                </div>
+                <div class="gradingwrong" id="q6cheater">
+                    <h2 class="wrongtext">Incorrect</h2>
+                    <p class="wrongtext">Cheater.</p>
+                </div>
+                <div class="gradingright" id="q6right">
+                    <h2 class="righttext">Correct</h2>
+                    <p class="righttext">You clicked the button!</p>
+                </div>     
+            </div>
+        </div>
+        <div class="align">
+            <button class="grademe" id="grademe">Grade Me!</button>
+        </div>
+    </body>
+</html>
