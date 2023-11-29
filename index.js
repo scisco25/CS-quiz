@@ -1,3 +1,4 @@
+//A Very Normal Quiz
 //page init
 
 //question 2 init
@@ -200,6 +201,14 @@ function grade() {
     }
     //input the score at the top
     document.getElementById('correct').innerHTML = result + "/";
+    document.getElementById('quest-correct').innerHTML = "Questions Correct";
+    //Change "Can you pass quiz" to something reflecting the score of the user
+    let howdo = document.getElementById('howdo');
+    if(result <= 2){howdo.innerHTML = "You cannot pass quiz"}
+    else if(result <= 4){howdo.innerHTML = "You are close to passing quiz"}
+    else if(result >= 5){howdo.innerHTML = "You can pass quiz"}
+    //nuke the grade button from existence so that the user can't hit it again
+    document.getElementById('grademe').remove();
     //send the user to the top of the page
     window.scrollTo(0,0);
 }
